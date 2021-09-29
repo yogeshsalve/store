@@ -33,8 +33,8 @@
       <td class="col-3">{{$s->description}}</td>
       <td class="col-3">
            <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
-                    <a href="/addstore" class="btn btn-success m-1">Modify</a>
-                    <a href="/addstore" class="btn btn-danger m-1">Delete</a>
+                    <a href="/editcoupon/{{$s->id}}" class="btn btn-success m-1">Modify</a>
+                    <a href="/deletecoupon/{{$s->id}}" class="btn btn-danger m-1"onclick="return confirm('Are you sure?')">Delete</a>
                     <!-- </div> -->
                 </td>
     </tr>

@@ -31,6 +31,13 @@ Route::view('/addcoupon', 'coupon/add_coupon');
 
 Route::post('/addstore', [StoreController::class, 'AddStore']);
 Route::get('/store', [StoreController::class, 'ShowStores']);
+Route::get('/deletestore/{id}',[StoreController::class, 'deletestore']);
+Route::get('/editstore/{id}',[StoreController::class, 'EditStore']);
+Route::post('/editstore', [StoreController::class, 'updatestore']);
+
 
 Route::post('/addcoupon', [StoreController::class, 'AddCoupon']);
 Route::get('/coupon', [StoreController::class, 'ShowCoupon']);
+Route::get('deletecoupon/{id}',[StoreController::class, 'deletecoupon']);
+Route::get('/editcoupon/{id}',[StoreController::class, 'EditCoupon']);
+Route::post('/editcoupon', [StoreController::class, 'updatecoupon']);

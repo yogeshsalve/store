@@ -33,8 +33,8 @@
       <td class="col-3">{{$s->store_score}}</td>
       <td class="col-3">
            <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
-                    <a href="/addstore" class="btn btn-success m-1">Modify</a>
-                    <a href="/addstore" class="btn btn-danger m-1">Delete</a>
+                    <a href="/editstore/{{$s->id}}" class="btn btn-success m-1">Modify</a>
+                    <a  href="/deletestore/{{$s->id}}"  class="btn btn-danger m-1" onclick="return confirm('Are you sure?')">Delete</a>
                     <!-- </div> -->
                 </td>
     </tr>
