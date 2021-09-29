@@ -16,7 +16,7 @@
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Manage Store</a>
+        <a href="/store" class="btn btn-primary">Manage Store</a>
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Manage Coupons</a>
+        <a href="/coupon" class="btn btn-primary">Manage Coupons</a>
       </div>
     </div>
   </div>

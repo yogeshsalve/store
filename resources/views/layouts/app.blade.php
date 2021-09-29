@@ -36,8 +36,30 @@
 
                     </ul>
 
+            
+
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Stores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">About Us</a>
+                        </li>
+
+
+
+
+
+
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -71,9 +93,14 @@
                             </li>
                         @endguest
                     </ul>
+
+
+                    
                 </div>
             </div>
         </nav>
+
+        
 
         <main class="py-4">
             @yield('content')
