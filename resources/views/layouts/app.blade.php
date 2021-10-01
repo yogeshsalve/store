@@ -40,9 +40,12 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/home">Home</a>
+                        </li>
 
                     <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Stores</a>
+                            <a class="nav-link" aria-current="page" href="/allstores">Stores</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Privacy Policy</a>

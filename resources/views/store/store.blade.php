@@ -19,8 +19,8 @@
     <tr>
       <th class="col-3">Store Name</th>
       <th class="col-3">Store id</th>
-      <th class="col-3">Score</th>
-      <th class="col-3">Action</th>
+      <th class="col-2">Score</th>
+      <th class="col-4">Action</th>
     </tr>
   </thead>
   <tbody>   
@@ -30,11 +30,12 @@
 
       <td class="col-3">{{$s->store_name}}</td>
       <td class="col-3">{{$s->store_id}}</td>
-      <td class="col-3">{{$s->store_score}}</td>
-      <td class="col-3">
+      <td class="col-2">{{$s->store_score}}</td>
+      <td class="col-4">
            <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
                     <a href="/editstore/{{$s->id}}" class="btn btn-success m-1">Modify</a>
                     <a  href="/deletestore/{{$s->id}}"  class="btn btn-danger m-1" onclick="return confirm('Are you sure?')">Delete</a>
+                    <a  href="/assigncoupon/{{$s->id}}"  class="btn btn-primary m-1" >Assign Coupon</a>
                     <!-- </div> -->
                 </td>
     </tr>
