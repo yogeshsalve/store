@@ -21,10 +21,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+Route::middleware('auth')->group(function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::view('/store', 'store/store');
+Route::view('/store', 'store/store')->middleware('auth');
 Route::view('/addstore', 'store/add_store');
 Route::view('/addcoupon', 'coupon/add_coupon');
 Route::view('/addcategory', 'category/add_category');
@@ -53,6 +55,9 @@ Route::get('/deletecategory/{id}',[StoreController::class, 'deletecategory']);
 
 Route::get('/assigncoupon/{id}',[StoreController::class, 'AssignCoupon']);
 Route::post('/assigncoupon', [StoreController::class, 'AssignCouponToStore']);
+
+
+});
 
 Route::get('/allstores', [StoreController::class, 'displayAllStores']);
 Route::view('/deals/{id}', 'store/deals');

@@ -66,9 +66,14 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
+
+                                            <input type="text" value="{{$d2->couponcode}}" id="myInput">
+
+                                            <!-- The button used to copy the text -->
+                                            <button onclick="myFunction()">Copy text</button>
                                             
-                                            <input type="text" class="form-control" name="store_id" value="{{$d2->couponcode}}">
-                                            <button type="button" class="btn btn-primary float-right">COPY</button>
+                                            <!-- <input type="text" class="form-control" name="store_id" value="{{$d2->couponcode}}">
+                                            <button type="button" class="btn btn-primary float-right">COPY</button> -->
                                             </div>
                                             <!-- <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -101,3 +106,21 @@
     </div>
 </div>
 @endsection
+
+
+<script>
+    function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
