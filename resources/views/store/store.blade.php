@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Store') }}</div>
+                <div class="card-header ">{{ __('Store') }}</div>
                 <div class="card-body">
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <a href="/addstore" class="btn btn-primary">Add Store</a>
