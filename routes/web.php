@@ -15,9 +15,15 @@ use App\Http\Controllers\AddStoreController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+    
+
+// });
+
+Route::view('/' ,'welcome');
+
+Route::get('/', [StoreController::class, 'storecarousel']);
 
 Auth::routes();
 
@@ -25,7 +31,7 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+Route::view('/about_us', 'about_us');
 Route::view('/store', 'store/store')->middleware('auth');
 Route::view('/addstore', 'store/add_store');
 Route::view('/addcoupon', 'coupon/add_coupon');
@@ -62,3 +68,11 @@ Route::post('/assigncoupon', [StoreController::class, 'AssignCouponToStore']);
 Route::get('/allstores', [StoreController::class, 'displayAllStores']);
 Route::view('/deals/{id}', 'store/deals');
 Route::get('/deals/{id}',[StoreController::class, 'DisplayStoreCoupons']);
+
+Route::get('/deleteAssignedCoupon/{id}',[StoreController::class, 'deleteAssignedCoupon']);
+Route::get('/allcategory', [StoreController::class, 'displayAllCategories']);
+Route::get('/categorywise_stores/{category}', [StoreController::class, 'categorywiseStores']);
+
+
+Route::view('/privacy_policy', 'links/privacy_policy');
+Route::view('/contact_us', 'links/contact_us');

@@ -49,8 +49,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="/allstores">Stores</a></li>
-          <li><a class="nav-link scrollto" href="/allcategory">Category</a></li>
+          <li><a class="nav-link scrollto active" href="#">Deals</a></li>
+          <li><a class="nav-link scrollto" href="#">Category</a></li>
           <li><a class="nav-link scrollto" href="#">Reviews</a></li>
           
           @if (Route::has('login'))
@@ -71,37 +71,15 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
-          <div>
-            <h1>Explore The Best Templates For Consistent Workflows</h1>
-            <h2>Get benefited from the predetermined design configurations with verified coupons</h2>
-            <a href="#" class="download-btn"><i class="bx bxl-play-store"></i> Google Play</a>
-            <a href="#" class="download-btn"><i class="bx bxl-apple"></i> App Store</a>
-          </div>
-        </div>
-        <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
 
   <main id="main">
 
     <!-- ======= App Features Section ======= -->
-    <section id="features" class="features">
+    <!-- <section id="features" class="features">
       <div class="container">
 
-        <!-- <div class="section-title">
-          <h2>App Features</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div> -->
+      
 
         <div class="row no-gutters">
           <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
@@ -146,7 +124,8 @@
         </div>
 
       </div>
-    </section><!-- End App Features Section -->
+    </section> -->
+    <!-- End App Features Section -->
 
     <!-- ======= Details Section ======= -->
     <section id="details" class="details">
@@ -179,18 +158,15 @@
             <img src="assets/img/details-2.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
-            <h3>Why Choose Coupon Hub?</h3>
+            <h3>Contact Us</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            Anything to share?
             </p>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+            Thank you for your interest in ABC.com, If you need further assistance or have any queries related to the templates & themes reviews, please contact our team.
             </p>
             <p>
-              Inventore id enim dolor dicta qui et magni molestiae. Mollitia optio officia illum ut cupiditate eos autem. Soluta dolorum repellendus repellat amet autem rerum illum in. Quibusdam occaecati est nisi esse. Saepe aut dignissimos distinctio id enim.
+            E-mail: abc@gmail.com
             </p>
           </div>
         </div>
@@ -243,30 +219,8 @@
     </section><!-- End Details Section -->
 
     <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Popular Stores</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-        </div>
-
-      </div>
-
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="gallery-slider swiper">
-
-          <div class="swiper-wrapper">
-            @foreach($store as $s)
-            <div class="swiper-slide"><a href="" class="gallery-lightbox" data-gall="gallery-carousel"><img src="/storeimages/{{$s->store_image}}" class="img-fluid" alt=""></a></div>
-            @endforeach            
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Gallery Section -->
+   
+   <!-- End Gallery Section -->
 
     
     
@@ -309,23 +263,23 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/allstores">Stores</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/allcategory">All Category</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/contact_us">Contact Us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/about_us">About US</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Stores</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">All Category</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About US</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="/privacy_policy">Privacy policy</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
-            <!-- <ul>
+            <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul> -->
+            </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">

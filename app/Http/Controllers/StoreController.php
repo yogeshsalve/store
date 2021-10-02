@@ -7,6 +7,8 @@ use App\Models\category;
 use App\Models\assigncoupon;
 
 use Illuminate\Http\Request;
+use Session;
+use DB;
 
 class StoreController extends Controller
 {
@@ -93,6 +95,7 @@ function updatestore(Request $req)
         $s->couponname=$req->couponname;
         $s->couponcode=$req->couponcode;
         $s->description=$req->description;
+        $s->discount=$req->discount;
         $s->save();
         // $req->session()->flash('status', "Store Added Successfully");
         return redirect('/coupon')->with('success','Coupon Added successfully.');;
@@ -182,21 +185,59 @@ function AssignCoupon($id)
       return view('store/assigncoupon',['store'=>$store,'coupon'=>$coupon,'display1'=>$display1,'display2'=>$display2]);
 
     }
+//####################################################
 
-    function AssignCouponToStore(Request $req)
-   {
-        $s = new assigncoupon;
-        $s->storeid=$req->storeid;
-        $s->couponid=$req->couponid;
-        $s->save();
-        $id=$req->storeid;
-        return redirect('/store');
-   }
+function AssignCouponToStore(Request $req)
+{
+    $this->validate($req, [
+        'couponid'=>'required|max:50',
+    ]);
+    $storeid = $req->input('storeid');
+    $couponid = $req->input('couponid');
+
+    
+    $data = array(
+        'storeid' =>$storeid,
+        'couponid' =>$couponid,
+    );
+    
+    $count = DB::table('assigncoupon')->where('storeid', $storeid)
+    ->where('couponid', $couponid )
+    ->count();
+    
+    if($count >= 1){
+        $req->session()->flash('status1','Already Assigned !');
+    }
+
+    else{
+        DB::table('assigncoupon')->insert($data);
+        $req->session()->flash('status','Coupon Assigned successfully');
+    }
+    return redirect('/assigncoupon/'.$storeid);
+  }
+  //   function AssignCouponToStore(Request $req)
+  //  {
+  //       $s = new assigncoupon;
+  //       $s->storeid=$req->storeid;
+  //       $s->couponid=$req->couponid;
+  //       $s->save();
+  //       $id=$req->storeid;
+  //       return redirect('/store');
+  //  }
 //########################################
 
-public function displayAllStores()
+public function displayAllStores(Request $req)
 {
-    $store=store::all();
+    $searchstore=$req->storename;
+    if(isset($searchstore)){
+      $store = DB::table('store')->where('store_name','LIKE','%'.$searchstore.'%')
+                      ->get();
+    }
+    else{
+      $store=store::all();
+    }
+    
+    
     return view('store/all_stores_list',['store'=>$store]);
 }
 //########################################
@@ -206,6 +247,41 @@ function DisplayStoreCoupons($id)
       $display1=assigncoupon::all()->where('storeid',$id);
       $display2=coupon::all();
       return view('store/deals',['store'=>$store,'display1'=>$display1,'display2'=>$display2]);
+    }
+
+//###################################################
+public function storecarousel()
+{
+    $store=store::orderBy('store_score', 'DESC')->limit(5)->get();
+    
+    // orderBy('store_score', 'DESC')->get();   
+    return view('welcome',['store'=>$store]);
+}
+//#########################################
+function deleteAssignedCoupon($id)
+{
+  $assigncoupon= assigncoupon::find($id);
+  $assigncoupon->delete();
+  return redirect('/assigncoupon/'.$id);
+}
+
+//########################################
+public function displayAllCategories(Request $req)
+{
+  $searchcategory=$req->categoryname;
+  if(isset($searchcategory)){
+    $category = DB::table('category')->where('category_name','LIKE','%'.$searchcategory.'%')->get();
+  }
+  else{
+    $category=category::all();
+  }
+    return view('category/all_category_list',['category'=>$category]);
+}
+//########################################
+function categorywiseStores($category)
+    { 
+      $store=store::all()->where('store_category',$category);
+      return view('store/categorywise_store',['store'=>$store]);
     }
 
 }

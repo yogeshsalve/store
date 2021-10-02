@@ -14,8 +14,7 @@
   <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <img class="card-img-top" src="https://t4.ftcdn.net/jpg/02/87/31/61/360_F_287316112_M5wI7vXSLf1IWyAb4O5ZmR3RJqKuglzs.jpg" alt="Card image">
         <a href="/store" class="btn btn-primary">Manage Store</a>
       </div>
     </div>
@@ -23,18 +22,16 @@
   <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="/coupon" class="btn btn-primary">Manage Coupons</a>
+      <img class="card-img-top" src="https://t4.ftcdn.net/jpg/02/87/31/61/360_F_287316112_M5wI7vXSLf1IWyAb4O5ZmR3RJqKuglzs.jpg" alt="Card image">
+      <a href="/coupon" class="btn btn-primary">Manage Coupons</a>
       </div>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="/addcategory" class="btn btn-primary">Manage Category</a>
+      <img class="card-img-top" src="https://t4.ftcdn.net/jpg/02/87/31/61/360_F_287316112_M5wI7vXSLf1IWyAb4O5ZmR3RJqKuglzs.jpg" alt="Card image">
+      <a href="/addcategory" class="btn btn-primary">Manage Category</a>
       </div>
     </div>
   </div>

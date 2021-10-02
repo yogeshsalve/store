@@ -2,17 +2,6 @@
 @section('content')
 
 <div class="container">
-
-
-<form class="form-inline" action="/allstores" method="GET">
-  <div class="form-group mx-sm-3 mb-2">
-    <input type="text" class="form-control" id="inputPassword2" placeholder="Enter Store name" name="storename">
-  </div>
-  <button type="submit" class="btn btn-primary mb-2">Search</button>
-  <button type="submit" class="btn btn-primary mb-2 ml-2" onClick="window.location.reload();">Refresh</button>
-</form>
-
-
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
